@@ -24,11 +24,11 @@
 - 将数据从原始 pkl 格式转换到 lerobot 格式
     ```bash
     # raw_data_dir: str, 原始数据路径
-    # repo_id: str, 默认是 None, 直接使用 raw_data_dir 的目录名
+    # repo_id: str, 默认是 None, 会直接使用 raw_data_dir 的目录名
     # mode: str, dual / left / right
     # fps: int, 帧率
     python scripts/transform_pkl2lerobot.py 
-        --raw_data_dir /media/amax/Lenovo/UR_data/tangzhipeng/put_the_green_box_into_static_basket \  
-        --mode left \
+        --raw_data_dir /path/to/your/data \
+        --mode dual \
         --fps 25
     ```
