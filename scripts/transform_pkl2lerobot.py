@@ -223,7 +223,6 @@ def main(args: Args):
     task_name_list = json.load(
         open(os.path.join(args.raw_data_dir, "task_name.json"), "r")
     )
-    import pdb; pdb.set_trace()
 
     use_left = (args.mode == "dual") or (args.mode == "left")
     use_right = (args.mode == "dual") or (args.mode == "right")
