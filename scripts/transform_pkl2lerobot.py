@@ -12,7 +12,6 @@ import json
 import random
 from dataclasses import dataclass
 from pathlib import Path
-TASKDESCRIPTION = "Scoop out the salt and pour it onto white paper."
 try:
     from scipy.spatial.transform import Rotation as R
 except ImportError:
@@ -38,9 +37,9 @@ class Args:
         assert os.path.exists(os.path.join(self.raw_data_dir, "task_name.json")), "task_name.json not exist!"
 
 def load_raw_episodes(data_dir):
-    """读取所有 .pkl 文件"""
+    """load all pkl files"""
     pkl_files = sorted(glob.glob(os.path.join(data_dir, "*.pkl")))
-    print(f"找到 {len(pkl_files)} 个数据文件。")
+    print(f"Find {len(pkl_files)} files")
     
     for pkl_path in pkl_files:
         try:
@@ -49,9 +48,9 @@ def load_raw_episodes(data_dir):
             if isinstance(data, list) and len(data) > 0:
                 yield pkl_path, data
             else:
-                print(f"跳过无效文件: {pkl_path}")
+                print(f"Skip invalid file: {pkl_path}")
         except Exception as e:
-            print(f"读取错误 {pkl_path}: {e}")
+            print(f"Error in reading pkl file {pkl_path}: {e}")
 
 def process_frame(frame, use_left, use_right):
     """
@@ -118,7 +117,6 @@ def main(args: Args):
             "names": ["height", "width", "channel"],
         },
     }
-
 
     if args.mode == "dual": 
         features.update(
