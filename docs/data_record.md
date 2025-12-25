@@ -4,10 +4,10 @@
     - 充电：正面不能被遮挡，屏幕显示是否充电
     - 走之后，要把所有东西关掉
 - no machine 连接：
-    - IP: 192.168.10.2
-    - CMCC 网络，12345678
-    - username: tl
-    - password: kai
+    - IP: xxx.xxx.xx.x
+    - CMCC 网络，xxxxxxx
+    - username: xx
+    - password: xxx
 - 底盘遥控器：
     - 开机，关机：长按中间圆形按钮
     - 前进和后退档
