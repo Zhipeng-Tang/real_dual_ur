@@ -1,6 +1,8 @@
+## introduction
 - 主文件: 都在目录 `XRoboToolkit-Teleop-Sample-Python/scripts/hardware/`, 暂时没实现成比较统一的形式
     - `dual_arm_ur5e_launch.py`: 双臂 pi0 部署
     - `right_arm_ur5e_launch.py`: 右臂 pi0 部署
+    - `right_arm_ur5e_async_launch.py`: 右臂 pi0 部署, **异步**
     - `dual_arm_ur5e_trajectory_replay.py`: 双臂轨迹回放 (需要手动修改代码里的 log file)
 - 控制代码: 双臂 + 夹爪控制代码参考 `XRoboToolkit-Teleop-Sample-Python/xrobotoolkit_teleop/policy_controller/dual_arm_ur_gripper_controller.py`
     - **尽量不要修改这个文件**
@@ -24,3 +26,22 @@
     - 输出: `action, np.array`
         - 单臂情况下是 7 维数组
         - 双臂情况下是 14 维数组
+## run
+- trajectory replay: 
+    ```bash
+    python scripts/hardware/dual_arm_ur5e_trajectory_replay.py 
+    ```
+- pi0 policy: 
+    ```bash
+    # 右臂
+    # host: API ip
+    # port: API port
+    # instruction: task instruction
+    python scripts/hardware/right_arm_ur5e_launch.py --host 127.0.0.1 --port 8000 --instruction "your task instruction"
+
+    # 双臂 
+    python scripts/hardware/dual_arm_ur5e_launch.py --host 127.0.0.1 --port 8000 --instruction "your task instruction"
+
+    # 右臂
+    python scripts/hardware/right_arm_ur5e_async_launch.py --host 127.0.0.1 --port 8000 --instruction "your task instruction"
+    ```
