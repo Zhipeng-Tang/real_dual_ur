@@ -1,0 +1,20 @@
+**grip beaker and pour:**
+
+- desc: Pour the liquid from the beaker on the left into the beaker on the。
+- 描述:夹起左边的烧杯，将液体倒入右边的烧杯(实际上没有液体)
+- 机械臂:左臂
+- 数据路径：
+
+**grasp beaker and place:**
+
+- desc: Grasp the beaker and place it on the magnetic stirring apparatusD行。
+- 描述: 夹起圆底烧杯，并放置在加热台上
+- 机械臂: 右臂
+- 数据路径：
+
+**tangzhipeng/put the green box into static basket:**
+
+- desc: Put the green block on the table into the basket.
+- 描述:将桌子上的绿色方块放进篮子中
+- 机械臂: 左臂
+
