@@ -42,6 +42,6 @@
     # 双臂 
     python scripts/hardware/dual_arm_ur5e_launch.py --host 127.0.0.1 --port 8000 --instruction "your task instruction"
 
-    # 右臂
+    # 右臂 (异步)
     python scripts/hardware/right_arm_ur5e_async_launch.py --host 127.0.0.1 --port 8000 --instruction "your task instruction"
     ```
