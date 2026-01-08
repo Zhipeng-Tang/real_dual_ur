@@ -3,7 +3,7 @@
     - `dual_arm_ur5e_launch.py`: 双臂 pi0 部署
     - `right_arm_ur5e_launch.py`: 右臂 pi0 部署
     - `right_arm_ur5e_async_launch.py`: 右臂 pi0 部署, **异步**
-    - `dual_arm_ur5e_trajectory_replay.py`: 双臂轨迹回放 (需要手动修改代码里的 log file)
+    - `dual_arm_ur5e_trajectory_replay.py`: 双臂轨迹回放
 - 控制代码: 双臂 + 夹爪控制代码参考 `XRoboToolkit-Teleop-Sample-Python/xrobotoolkit_teleop/policy_controller/dual_arm_ur_gripper_controller.py`
     - **尽量不要修改这个文件**
     - 模型推理: `policy_step` 函数
@@ -27,9 +27,13 @@
         - 单臂情况下是 7 维数组
         - 双臂情况下是 14 维数组
 ## run
+- back to initial position: 
+    ```bash
+    python scripts/hardware/dual_arm_ur5e_back_to_initial_pos.py --log-file /path/to/pkl/file 
+    ```
 - trajectory replay: 
     ```bash
-    python scripts/hardware/dual_arm_ur5e_trajectory_replay.py 
+    python scripts/hardware/dual_arm_ur5e_trajectory_replay.py --log-file /path/to/pkl/file 
     ```
 - pi0 policy: 
     ```bash
