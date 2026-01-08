@@ -3,18 +3,77 @@
 - desc: Pour the liquid from the beaker on the left into the beaker on the。
 - 描述:夹起左边的烧杯，将液体倒入右边的烧杯(实际上没有液体)
 - 机械臂:左臂
-- 数据路径：
+- 数据路径：data/grip_beaker_and_pour
 
 **grasp beaker and place:**
 
 - desc: Grasp the beaker and place it on the magnetic stirring apparatusD行。
 - 描述: 夹起圆底烧杯，并放置在加热台上
 - 机械臂: 右臂
-- 数据路径：
+- 数据路径：data/grasp_beaker_and_place
 
-**tangzhipeng/put the green box into static basket:**
+**put the green box into static basket:**
 
 - desc: Put the green block on the table into the basket.
-- 描述:将桌子上的绿色方块放进篮子中
+- 描述:将桌子上的绿色方块放进篮子中（初始位置不一样）
 - 机械臂: 左臂
+- 数据路径：data/put_the_green_box_into_static_basket
+
+**put_the_green_box_into_static_basket_from_same_initial_pose:**
+
+- desc: Put the green block on the table into the basket.
+- 描述:将桌子上的绿色方块放进篮子中（初始位置一样）
+- 机械臂: 左臂
+- 数据路径：data/put_the_green_box_into_static_basket_from_same_initial_pose
+
+**ur_dual_scoop:**
+
+- desc: Use a spoon to scoop salt from the yellow container onto the weighing paper on the balance.
+- 描述:从黄色盒子用勺子舀取食盐到称重器上的滤纸
+- 机械臂: 右臂
+- 数据路径：data/ur_dual_scoop
+
+**pick_beaker_to_paper_data:**
+
+- desc: 
+- 描述:
+- 机械臂: 右臂
+- 数据路径：data/pick_beaker_to_paper_data
+
+**ur_dual_grip_beaker_v1:**
+
+- desc: 
+- 描述:
+- 机械臂: 右臂
+- 数据路径:
+
+**ur_dual_pick_up_view2_v1:**
+
+- desc: 
+- 描述:
+- 机械臂: 右臂
+- 数据路径:
+
+**ur_dual_pick_up_view2_v1_joint:**
+
+- desc: 
+- 描述:
+- 机械臂: 右臂
+- 数据路径:data/ur_dual_pick_up_view2_v1_joint
+
+**ur_dual_pick_up_view2_v2_joint:**
+
+- desc: 
+- 描述:
+- 机械臂: 右臂
+- 数据路径:data/ur_dual_pick_up_view2_v2_joint
+
+**ur_dual_pick_up_view2_v3_joint:**
+
+- desc: 
+- 描述:
+- 机械臂: 右臂
+- 数据路径:data/ur_dual_pick_up_view2_v3_joint
+
+
 
