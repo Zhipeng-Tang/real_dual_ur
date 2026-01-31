@@ -3,7 +3,8 @@ Please refer to [data_record](docs/data_record.md)
 - 数据录制脚本: 
     ```bash
     # --log-dir: 数据存放目录
-    # --enable-right-dir: 是否允许右夹爪闭合，在使用勺子的时候需要关闭，防止出错
+    # --enable-right-trigger: 是否允许右夹爪闭合
+    # --no-enable-right-trigger: 在使用勺子的时候需要关闭，防止出错
     python scripts/hardware/teleop_dual_ur5e_hardware.py --log-dir /path/to/your/data/dir --enable-right-trigger
 
     # 回到某一条数据的初始位置，使得所有数据的初始位置严格相同
@@ -19,5 +20,10 @@ Please refer to [data_record](docs/data_record.md)
     ```
 ## 2 数据格式，存放和格式转换
 Please refer to [data_format_storage_transform](docs/data_format_storage_transform.md)
-## 3 模型部署: 
+## 3 模型部署 
 Please refer to [deployment](docs/deployment.md)
+## 4 注意事项
+- 录有勺子的数据时，需要关闭右夹爪闭合: `--no-enable-right-trigger`
+- 录数据过程中一定要时不时检查数据是否正确，图像是否正常
+- 关机时，先给机械臂断电，再关闭电源
+- 超过三周不使用时，需打开左侧面外壳，关闭四个电闸
