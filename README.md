@@ -7,6 +7,10 @@ Please refer to [data_record](docs/data_record.md)
     # --no-enable-right-trigger: 在使用勺子的时候需要关闭，防止出错
     python scripts/hardware/teleop_dual_ur5e_hardware.py --log-dir /path/to/your/data/dir --enable-right-trigger
 
+    # 录制数据并自动回到初始位置
+    # --log_file: 读取初始位姿的数据路径
+    python scripts/hardware/teleop_dual_ur5e_hardware_back_to_init.py --log_file /path/to/pkl/file 
+
     # 回到某一条数据的初始位置，使得所有数据的初始位置严格相同
     # --log-file: 数据的路径
     python scripts/hardware/dual_arm_ur5e_back_to_initial_pos.py --log-file /path/to/pkl/file 
@@ -14,9 +18,16 @@ Please refer to [data_record](docs/data_record.md)
     # 轨迹回放，用于验证轨迹正确性
     python scripts/hardware/dual_arm_ur5e_trajectory_replay.py --log-file /path/to/pkl/file
     
-    # 渲染数据中的图像，用于检查数据正确性
+    # 渲染数据中的图像，用于检查数据正确性(单个数据)
     cd logs
     python write_video.py --log_file /path/to/your/pkl/file
+
+    # 渲染数据中的图像，用于检查数据正确性(多个数据)
+    # 持续监测 logs 文件夹下出现的成对数据
+    # 并将（数据对+视频文件+质量曲线图）放到logs/tmp下的同名文件夹里
+    # 按 control+C 退出监测
+    cd logs
+    python write_video_multi.py
     ```
 ## 2 数据格式，存放和格式转换
 Please refer to [data_format_storage_transform](docs/data_format_storage_transform.md)
